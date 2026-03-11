@@ -1,0 +1,24 @@
+import './App.css'
+import { Route, Routes, Link } from 'react-router-dom';
+import { Homepage } from './pages/Homepage';
+import { CollectionPage } from './pages/CollectionPage';
+import { Navbar } from './components/Navbar';
+import { ToastContainer } from 'react-toastify';
+
+function App() {
+
+  return (
+    <div className='min-h-screen text-white w-full bg-gray-950'>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Homepage/>} />
+        <Route path='/collection' element={<CollectionPage/>} />
+      </Routes>
+
+      <ToastContainer />
+      
+    </div>
+  )
+}
+
+export default App
